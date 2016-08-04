@@ -6,7 +6,7 @@ systemctl start vsftpd
 systemctl enable vsftpd
 rm -Rf /etc/vsftpd/vsftpd.conf
 cd /etc/vsftpd/
-wget https://raw.githubusercontent.com/systemroot/in-host.co/master/etc/vsftpd/vsftpd.conf
+wget https://raw.githubusercontent.com/systemroot/in-host/master/etc/vsftpd/vsftpd.conf
 service vsftpd restart
 clear
 echo "VSFTPD INSTALLATION IS DONE"
