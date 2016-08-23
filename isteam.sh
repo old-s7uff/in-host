@@ -16,4 +16,19 @@ echo "Counter Strike 1.6 Is Done."
 echo "Now Installing Amxmod, dproto, metamod."
 echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
 echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
-cd /home/`whoami`/cstrike/cstrike
+cd /home/`whoami`/cstrike/
+wget https://raw.githubusercontent.com/systemroot/in-host/master/files/dproto.cfg
+cd /home/`whoami`/cstrike/cstrike/
+wget https://raw.githubusercontent.com/systemroot/in-host/master/files/dproto.cfg
+wget https://raw.githubusercontent.com/systemroot/in-host/master/files/liblist.gam
+wget https://github.com/systemroot/in-host/raw/master/files/addons.zip
+unzip addons.zip
+rm -Rf addons.zip
+rm -Rf ~/Steam/
+rm -Rf ~/steamcmd/
+{
+echo "./hlds_run -game cstrike +ip 0.0.0.0 +port 27024 +maxplayers 32 +map de_dust2 -pingboost 2 -autoupdate -insecure -console +log on +mp_logecho 1"
+} > "~/start.sh"
+chmod +x ~/start.sh
+./start.sh
+
