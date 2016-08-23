@@ -1,6 +1,11 @@
 #!/bin/bash
 # Created For Users With No SUDO Access!
 user=$(whoami)
+ip=$(0.0.0.0)
+port=$(27015)
+players=$(32)
+map=$(de_dust2)
+pingb=$(2)
 mkdir ~/steamcmd
 cd ~/steamcmd
 wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
@@ -27,9 +32,9 @@ unzip addons.zip
 rm -Rf addons.zip
 rm -Rf ~/Steam/
 rm -Rf ~/steamcmd/
-{
-echo "./hlds_run -game cstrike +ip 0.0.0.0 +port 27024 +maxplayers 32 +map de_dust2 -pingboost 2 -autoupdate -insecure -console +log on +mp_logecho 1"
-} > "~/start.sh"
+cat <<EOF > ~/start.sh
+./hlds_run -game cstrike +ip $ip +port $port +maxplayers $players +map $map -pingboost $pingb -autoupdate
+EOF
 chmod +x ~/start.sh
-./start.sh
+~/./start.sh
 
