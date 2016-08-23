@@ -26,6 +26,7 @@ cd /home/`whoami`/cstrike/
 wget https://raw.githubusercontent.com/systemroot/in-host/master/files/dproto.cfg
 cd /home/`whoami`/cstrike/cstrike/
 wget https://raw.githubusercontent.com/systemroot/in-host/master/files/dproto.cfg
+rm -Rf /home/`whoami`/cstrike/cstrike/liblist.gam
 wget https://raw.githubusercontent.com/systemroot/in-host/master/files/liblist.gam
 wget https://github.com/systemroot/in-host/raw/master/files/addons.zip
 unzip addons.zip
@@ -33,6 +34,7 @@ rm -Rf addons.zip
 rm -Rf ~/Steam/
 rm -Rf ~/steamcmd/
 cat <<EOF > ~/start.sh
+cd /home/$user/cstrike/
 ./hlds_run -game cstrike +ip $ip +port $port +maxplayers $players +map $map -pingboost $pingb -autoupdate
 EOF
 chmod +x ~/start.sh
