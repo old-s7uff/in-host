@@ -16,6 +16,7 @@ echo "Counter Strike 1.6 Is Done."
 echo "Now Installing Amxmod, dproto, metamod."
 echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
 echo "*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*"
+sleep 2
 cd /home/`whoami`/cstrike/
 wget https://raw.githubusercontent.com/systemroot/in-host/master/files/dproto.cfg
 cd /home/`whoami`/cstrike/cstrike/
