@@ -1,11 +1,11 @@
 #!/bin/bash
 # Created For Users With No SUDO Access!
 user=$(whoami)
-ip=$(0.0.0.0)
-port=$(27015)
-players=$(32)
-map=$(de_dust2)
-pingb=$(2)
+ip="0.0.0.0"
+port="27015"
+players="32"
+map="de_dust2"
+pingb="2"
 mkdir ~/steamcmd
 cd ~/steamcmd
 wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
