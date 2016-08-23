@@ -1,6 +1,5 @@
 #!/bin/bash
-apt-get update; apt-get upgrade -y
-apt-get install lib32gcc1 -y
+# Created For Users With No SUDO Access!
 mkdir ~/steamcmd
 cd ~/steamcmd
 wget https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz
